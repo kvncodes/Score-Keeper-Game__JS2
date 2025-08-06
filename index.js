@@ -22,7 +22,7 @@ input.addEventListener("change", function () {
 });
 
 p1.button.addEventListener("click", function () {
-	if (!isGameOver && winningScore) {
+	if (!isGameOver) {
 		p1.score++;
 		p1.display.textContent = p1.score;
 		if (p1.score === winningScore) {
@@ -32,7 +32,7 @@ p1.button.addEventListener("click", function () {
 });
 
 p2.button.addEventListener("click", function () {
-	if (!isGameOver && winningScore) {
+	if (!isGameOver) {
 		p2.score++;
 		p2.display.textContent = p2.score;
 		if (p2.score === winningScore) {
@@ -53,6 +53,7 @@ resetButton.addEventListener("click", function () {
 	p2.button.disabled = false;
 	p1.button.style.opacity = "1";
 	p2.button.style.opacity = "1";
+	input.value = "";
 });
 
 function updateStyles(winner, loser) {
