@@ -8,7 +8,47 @@
 	</head>
 	<body>
 		<article class="score-keeper-container">
-			<img src="" alt="" class="header-image" />
+			<img
+				src="lisa-keffer-i0kB5B9J8Ds-unsplash.jpg"
+				alt=""
+				class="header-image"
+			/>
+
+			<div class="score-data">
+				<h1>Ping-Pong Score Keeper</h1>
+
+				<hr />
+
+				<div class="score-board">
+					<span id="player-one-score">0</span>
+					<span>-</span>
+					<span id="player-two-score">0</span>
+					<p>Use the buttons below to keep score.</p>
+				</div>
+
+				<form id="form">
+					<label for="score">Playing To :</label>
+					<select name="score" id="score" required>
+						<option value="">Score:</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
+				</form>
+			</div>
+
+			<div class="buttons-section">
+				<button id="add-score-player-one">+1 Player One</button>
+				<button id="add-score-player-two">+1 Player Two</button>
+				<button id="reset">Reset</button>
+			</div>
 		</article>
 
 		<script src="index.js"></script>

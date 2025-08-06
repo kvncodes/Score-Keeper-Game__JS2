@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+	--ff-base: "Inter", sans-serif;
+
+	--fs-base: 1rem;
+
+	--fw-base: 400;
+	--fw-strong: 500;
+	--fw-bold: 700;
+}
+
+@layer reset {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		html {
+			interpolate-size: allow-keywords;
+		}
+	}
+
+	body {
+		/* 4. Add accessible line-height */
+		line-height: 1.6;
+		/* 5. Improve text rendering */
+		-webkit-font-smoothing: antialiased;
+	}
+
+	img,
+	picture,
+	video,
+	canvas,
+	svg {
+		display: block;
+		max-width: 100%;
+	}
+
+	input,
+	button,
+	textarea,
+	select {
+		font: inherit;
+	}
+
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		overflow-wrap: break-word;
+	}
+
+	p {
+		text-wrap: pretty;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		text-wrap: balance;
+	}
+}
+
+body {
+	font-family: var(--ff-base);
+	font-size: var(--fs-base);
+	font-weight: var(--fw-base);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100svh;
+	padding: 1.5rem;
+	background: linear-gradient(
+		70deg,
+		rgb(200, 255, 200),
+		white,
+		rgb(255, 194, 194)
+	);
+}
+
+.score-keeper-container {
+	background-color: rgba(221, 221, 221, 0.45);
+	display: grid;
+	gap: 1rem;
+	border-radius: 1rem;
+	overflow: hidden;
+	max-width: 600px;
+	border: 2px solid rgb(255, 255, 255);
+	box-shadow: 0px 0px 50px 20px rgba(245, 245, 245, 0.618);
+}
+
+.score-keeper-container .score-data {
+	display: grid;
+	gap: 1rem;
+	padding-inline: 1rem;
+}
+
+.score-keeper-container .score-data hr {
+	border: none;
+	border-top: 3px solid rgb(255, 255, 255);
+	border-radius: 0.5rem;
+}
+
+.score-keeper-container .score-data span {
+	font-size: 2.5rem;
+	font-weight: var(--fw-bold);
+}
+
+.score-keeper-container .score-data p {
+	color: rgb(78, 78, 78);
+}
+
+.score-keeper-container .score-data label {
+	font-size: 1.2rem;
+	font-weight: var(--fw-strong);
+}
+
+.score-keeper-container .score-data form {
+	display: flex;
+	align-items: center;
+}
+
+.score-keeper-container .score-data select {
+	border: none;
+	margin-inline: 1rem;
+	border-radius: 0.5rem;
+	padding-inline: 0.5rem;
+}
+
+.score-keeper-container .score-data select:focus,
+.score-keeper-container .score-data select:active {
+	outline: 1px solid rgb(117, 117, 117);
+}
+
+.score-keeper-container .buttons-section {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-content: space-between;
+}
+
+.score-keeper-container .buttons-section button {
+	border: none;
+	margin-block-start: 1rem;
+	padding: 0.5rem 1rem;
+	font-weight: var(--fw-strong);
+	color: rgb(255, 255, 255);
+	transition: opacity 0.08s ease-in;
+}
+
+.score-keeper-container .buttons-section button:hover,
+.score-keeper-container .buttons-section button:focus-visible {
+	opacity: 0.7;
+}
+
+#add-score-player-one {
+	background-color: rgb(38, 165, 38);
+}
+
+#add-score-player-two {
+	background-color: rgb(52, 103, 187);
+}
+
+#reset {
+	background-color: rgb(231, 42, 42);
+}
